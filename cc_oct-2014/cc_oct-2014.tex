@@ -51,7 +51,7 @@
 %    \end{itemize}
 %\end{frame}
 
-\section{My Research}
+%\section{My Research}
 \begin{frame}
     \frametitle{Current / past work}
     Highlights:
@@ -80,19 +80,45 @@
 
 \end{frame}
 
-\section{Gravitational Wave `Bursts'}
 
 %\begin{frame}
 %    \tableofcontents[currentsection]
 %\end{frame}
 
 
-%\subsection{Source Classes}
+\section{Gravitational Wave Sources}
 \begin{frame}
-    \frametitle{GW Sources \& Ground-based Detectors}
+    \frametitle{GW Sources \& Detectors}
+    \centering
+    \includegraphics[width=0.9\textwidth]{signal_spectra.png}\\
+    \tiny{Figure from~\cite{2014arXiv1408.0740M}}
+\end{frame}
+
+\subsection{Search Methods}
+\begin{frame}
+    \frametitle{GW Sources \& Search Methods}
+    \small{
+    Continuous signals:
     \begin{itemize}
-        \item \dots
+        \item Stochastic (e.g., cosmological/astrophysical \gw{} background)
+            $\rightarrow$ correlate noise spectra between \gw{} detectors
+        \item Isolated neutron stars (e.g., non-axisymmetry, ``mountains'' on
+            pulsars; Accretion-induced quadrupole in LMXBs, $r$-modes
+            $\rightarrow$ quasi-sinusoidal ``always-on'' signal, modulated by
+            Earth's motion w.r.t source $\rightarrow$ matched-filtering
     \end{itemize}
+    Transient signals broadly classified as:
+    \begin{itemize}
+        \item Well-modeled: e.g., compact binary coalescence (NS-NS, NS-BH,
+            stellar-mass BBH)
+            $\rightarrow$ very accurate waveform ``templates'' $\rightarrow$
+            matched-filtering
+        \item \red{`Bursts'\footnote{today's focus}: e.g., SNe, neutron star
+            oscillations / instabilities, merger/post-merger signals with
+        matter, IMBBH}
+    \end{itemize}
+}
+
 \end{frame}
 
 \subsection{Burst Analysis Strategies}
@@ -120,6 +146,8 @@
     \end{columns}
 
 \end{frame}
+
+\section{Gravitational Wave `Bursts'}
 
 \begin{frame}
     \frametitle{GWB Analysis: Excess Power}
@@ -327,7 +355,7 @@ i.e.,
             mass with $f_{\text{peak}}$
     \end{itemize}
     \begin{columns}[]
-        \column{0.2\textwidth}
+        \column{0.15\textwidth}
         \includegraphics[width=\textwidth]{takami_compactness.png} \\
         \centering
         \tiny{Takami et al: $f_1-M/R$ correlation}
@@ -486,7 +514,7 @@ i.e.,
 %    \end{itemize}
 %\end{frame}
 
-\section{Conclusion}
+\section{Summary}
 
 %   \subsection{Advanced LIGO: Observing Scenarios}
 %   \begin{frame}
@@ -495,11 +523,41 @@ i.e.,
 
 \begin{frame}
     \frametitle{Summary}
+    \small{
+    \begin{itemize}
+        \item Ground-based \gw{} detectors: sensitive to wide variety of
+            (typically) compact sources (NS, BH, \dots)
+        \item Known signal: matched-filtering; project data onto waveform
+            ``template'' basis
+        \item Unknown signal: coherent time-frequency analysis; project data
+            onto detector sub-space, compare with projection onto null-space
+        \item Example application: merger/post-merger signal from BNS
+            \begin{itemize}
+                \item Detect coherent power without a model
+                \item Reconstruct max-likelihood \gw{} $\hat{h}(t)$
+                \item Identify characteristic features in $|\hat{H}(f)|$ \&
+                    determine post-merger scenario, constrain NS EoS
+            \end{itemize}
+        \item aLIGO to come online $\sim$spring next year\dots
+    \end{itemize}
+}
+
+\end{frame}
+
+\begin{frame}
+    \frametitle{Advanced LIGO}
+    \small{
+    See \cite{2013arXiv1304.0670L} for planned science runs, expected
+detections from \red{\emph{next year}}}
+    \centering
+    \scalebox{0.35}{\includegraphics{aligo_range.pdf}}
 \end{frame}
 
 \begin{frame}[allowframebreaks]
     \frametitle{References}
+    \tiny{
     \bibliography{biblio}
+    }
 \end{frame}
 
 
