@@ -1,0 +1,182 @@
+\documentclass{beamer}
+\setbeamertemplate{navigation symbols}{}
+
+\usepackage{beamerthemeshadow}
+\setbeamertemplate{caption}[numbered]
+
+\hypersetup{colorlinks}
+
+\def\gw#1{gravitational wave#1 (GW#1)\gdef\gw{GW}}
+\def\ns#1{neutron star#1 (NS#1)\gdef\ns{NS}}
+
+\newcommand{\red}[1]{{\color{red}{#1}}}
+
+\begin{document}
+\title{Neutron Star Search Plan}
+\subtitle{DAC Call Oct 24$^{\text{th}}$ 2014}  
+\author{James A. Clark For the NS \& Burst Groups}
+\institute{Georgia Institute Of Technology}
+\date{} 
+
+\begin{frame}[plain]
+\titlepage
+\end{frame}
+
+%\begin{frame}\frametitle{Table of contents}\tableofcontents
+%\end{frame} 
+
+
+\section{NS Search Proposal Highlights}
+
+\begin{frame}
+    \frametitle{NS Search Proposal}
+    Search proposal nearing completion:
+    \begin{itemize}
+        \item Current draft in DCC: {\small \href{https://dcc.ligo.org/LIGO-T1400606}{https://dcc.ligo.org/LIGO-T1400606}}
+        \item DAC SVN:
+            {\small \href{https://trac.ligo.caltech.edu/dac/browser/WhitePaper/2014-2015}
+            {https://trac.ligo.caltech.edu/dac/browser/WhitePaper/2014-2015}}
+    \end{itemize}
+    For O1 plan is to only target \emph{extraordinary} events:
+    \begin{itemize}
+        \item Hyper-flares from Galactic magnetars (c.f., SGR 1806-20)
+        \item Targeted follow-up for BNS
+    \end{itemize}
+    Speculative/optimistic sources, but rare occurrences, huge
+    science potential, minimal resource requirements \& build off or use
+    analyses which are either mature or under development anyway.
+\end{frame}
+
+\subsection{Galactic Magnetar Hyperflares}
+\begin{frame}
+    \frametitle{Galactic Hyperflares: science case}
+    \begin{itemize}
+        \item LSC/Virgo have a history of high-profile, astrophysically interesting
+            searches for \gw{s} associated with magnetar flaring activity
+
+        \item O1 will probably not dramatically improve upon these results for
+            normal flaring activity
+
+        \item However, recall SGR 1806-20: $10^{47}$\,erg in hard X-rays / soft $\gamma$-rays in
+            $<1$\,s, \emph{within our Galaxy}
+
+        \item An event of this nature would generate significant astrophysical
+            interest (i.e., headlines) and may excite various \ns{} oscillation
+            modes and/or instabilities; we should be prepared to say something
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Galactic Hyperflares: search method}
+    Minimum:
+    \begin{itemize}
+        \item Immediate examination of burst online triggers
+        \item Manual analysis with optimized of \textsc{X-Pipeline}
+        \item Minimal development requirements, extends to higher frequencies
+            than standard GRB analysis
+        \item Only a small chance ($\sim 1\%$) of occurrence
+    \end{itemize}
+    Nominal:
+    \begin{itemize}
+        \item STAMP-GRB-like analysis for sensitivity to longer signals (e.g.,
+            instabilities, QPOs, \dots)
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Galactic Hyperflares: Publication Plan}
+    \begin{itemize}
+        \item {\bf Confident or Marginal Detection}: report detection \&
+            spectral analysis of waveform 
+        \item {\bf No Detection}: only publish if ratio of \gw{} energy U.L. to
+            isotropic EM energy is \emph{significantly} lower (better) than all
+            past magnetar analyses.  Otherwise, non-detection statement in e.g.,
+            end-of-run GRB publication
+    \end{itemize}
+\end{frame}
+
+\subsection{Post-BNS Bursts}
+%\begin{frame}
+%    \tableofcontents[currentsection,currentsubsection]
+%\end{frame}
+
+\begin{frame}
+    \frametitle{Postmerger Bursts: science case}
+    \begin{itemize}
+        \item Likely outcome of BNS coalescence: formation of (quasi) stable,
+            differentially rotating, oscillating \ns{} remnant
+        \item 10--100\,ms, 1--4\,kHz \gw{} emission, detectable in aLIGO (ZDHP) to
+            few--10's of Mpc 
+        \item Detection \& frequency estimation can constrain \ns{} equation of
+            state
+        \item Not likely to be detectable in O1  BUT astrophysics potential is
+            enormous
+        \item Also: if the remnant is stable, stronger, longer-lived \gw{}
+            emission is possible through e.g., bar-mode instabilities, B-field
+            induced quadrupole moment, \dots (10's--100\,Mpc)
+        \item Plausible first detection scenario: BNS inspiral; should be
+            prepared to answer questions about the post-merger scenario
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Postmerger Bursts: search method}
+    \begin{itemize}
+        \item Post-merger analysis $\iff$ inspiral detection.
+        \item Minimum: correlation of all-sky HF triggers (and reconstructions)
+            with inspiral time of coalescence $t_c \pm 100$\,ms
+        \item Nominal: targeted (narrow time-window around $t_c$, restricted
+            sky-location) follow-up of inspiral trigger with burst
+            parameter estimation analysis
+        \item Use STAMP-GRB-like analysis to search for longer lived-signals
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Postmerger Bursts: Publication Plans}
+    \begin{itemize}
+        \item {\bf Confident \& Marginal Detections}: any detection of a
+            post-merger BNS signal will be ground-breaking.  A confident
+            detection will give higher fidelity reconstruction and spectral
+            analysis, but marginal detection alone indicates survival against
+            prompt-collapse.  Publish either to accompany CBC deep P.E.
+        \item {\bf No detection}: Degeneracy between prompt-collapse \&
+            surviving but distant post-merger \ns{} renders upper limits
+            somewhat unininteresting; ``no evidence for a post-merger signature
+            was observed'' in the inspiral detection paper would suffice.
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{NS plans: Resource Requirements}
+    \begin{itemize}
+        \item Expect $<1$ event to follow-up for magnetars or BNS
+        \item Think of as a bonus GRB!
+        \item Development to dominate resource requirements (tuning
+            time/frequency space; already underway)
+    \end{itemize}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{Summary}
+    \begin{itemize}
+    \item NS search plan draft nearly complete
+    \item Sources identified
+    \item Pipelines selected
+    \item Volunteers assigned to projects
+    \item Still to-do:
+        \begin{itemize}
+            \item clean up science case / source description
+            \item fill in references
+            \item finalise / confirm resource requirements
+            \item finalise FTE estimates
+        \end{itemize}
+    \end{itemize}
+
+\end{frame}
+
+
+
+
+\end{document}
