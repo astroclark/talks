@@ -2,6 +2,8 @@
 \setbeamertemplate{navigation symbols}{}
 
 \usepackage{beamerthemeshadow}
+\usepackage{caption}
+\captionsetup{font=scriptsize,labelfont=scriptsize}
 \setbeamertemplate{caption}[numbered]
 
 \hypersetup{colorlinks}
@@ -16,35 +18,37 @@
 \begin{frame}
     \frametitle{James A. Clark: Gravitational Wave Data Analysis}
 
+    %\begin{itemize}
+        %\item 
+            {\small `Burst' (unmodelled) GW searches and astrophysical inferences
+            through machine learning and Bayesian model selection/parameter
+        estimation in ground-based GW detector data.}
+    %\end{itemize}
+
     \begin{columns}[]
-        \column{0.6\textwidth}
-        \begin{center}
-
-            \begin{small}
-                \begin{itemize}
-                    \item 
-                \end{itemize}
-            \end{small}
-
-    \begin{center}
-        \vspace{-0.75cm}
-        \begin{figure}
-            \scalebox{0.35}{\includegraphics{lho4s.jpg}} \\
-        \end{figure}
-    \end{center}
-
-    \end{center}
-
-
         \column{0.5\textwidth}
 
-    \begin{center}
-        \vspace{-0.75cm}
-        \begin{figure}
-            \scalebox{0.35}{\includegraphics{pmns_example.png}} \\
-            \scalebox{0.25}{\includegraphics{pmns_tfmap.png}}
-        \end{figure}
-    \end{center}
+        \begin{center}
+            \vspace{-0.65cm}
+            \begin{figure}
+                %\scalebox{0.25}{\includegraphics{example_map.png}} \\
+                \scalebox{0.35}{\includegraphics{lho4s.jpg}} \\
+                \caption{LIGO Hanford, WA}
+            \end{figure}
+        \end{center}
+
+
+        \column{0.6\textwidth}
+
+        \begin{center}
+%            \vspace{-.00cm}
+            \begin{figure}
+                %\scalebox{0.35}{\includegraphics{lho4s.jpg}} \\
+                \scalebox{0.25}{\includegraphics{example_map.png}} \\
+                \caption{Example time-frequency map for GW `burst' from
+                binary neutron star coalescence in noise}
+            \end{figure}
+        \end{center}
 
     \end{columns}
 
