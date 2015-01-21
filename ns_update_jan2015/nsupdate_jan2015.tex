@@ -163,21 +163,39 @@
 
 \begin{frame}
     \frametitle{LIB Studies}
+    {\small 
     \begin{itemize}
-        \item Some development / debugging was required to get end-to-end LIB
-            analysis of on-the-fly NINJA-style injections (no MDC frame
-            generation necessary)\footnote{successful NINJA injections in LIB
-            will also be useful for SNe}
-        \item Have a test run of $100$ post-merger injections
-            \url{https://ldas-jobs.ligo-wa.caltech.edu/~jclark/LIB/pmns/shen_135135/lib_3.6-Mpc}
-        \item Results consistent with past LIB experience: tendency for
-            frequency posterior to lock on to low-frequency content from
-            inspiral/merger \& miss the post-merger signal
+        \item Now have on-the-fly NINJA-style injections in
+            LIB\footnote{successful NINJA injections in LIB will also be useful
+            for SNe}
+        \item Test run of $100$ post-merger injections
+            {\tiny
+            \url{https://ldas-jobs.ligo-wa.caltech.edu/~jclark/LIB/pmns/shen_135135/lib_3.6-Mpc}}
+        \item Frequency posteriors for injections with 10:1 odds of signal vs noise:
     \end{itemize}
-\end{frame}
+}
 
-%\begin{frame}
-%    \frametitle{LIB Studies}
+\begin{columns}[]
+
+    \column{0.5\textwidth}
+    \begin{center}
+        \vspace{-1.1cm}
+        \begin{figure}
+            \centering
+            \scalebox{0.3}{\includegraphics{lib_freq_example.png}}
+        \end{figure}
+    \end{center}
+
+    \column{0.5\textwidth}
+    \begin{center}
+        Target freq $\sim2.25$\,kHz.  Problem: most runs only pick up the
+        low-frequency content (May be resolvable through configuration or data
+        conditioning choices, rather than templates)
+    \end{center}
+
+\end{columns}
+
+\end{frame}
 
 
 \begin{frame}
@@ -186,8 +204,6 @@
     reconstruction studies} via CEDs of post-merger injections\\~\\
     Motivations:
     \begin{itemize}
-        \item Standard LIB alone prone to mis-identifying the interesting part
-            of the signal
         \item Determine post-merger reconstruction fidelity, especially recovery
             of high frequencies
         \item Side project: how well can we determine inspiral/merger peak time?
@@ -199,7 +215,6 @@
 
 \begin{frame}
     \frametitle{CWB CED Example}
-    Handful of example CEDs (for 3.6\,Mpc injections):
     {\tiny
     \url{https://ldas-jobs.ligo.caltech.edu/~jlmciver/reports/ADV_SIM_PMNS_SHEN135135_MR/ced/}}
 
@@ -208,7 +223,8 @@
         \begin{center}
         \begin{figure}
             \vspace*{-0.5cm}
-    %        \includegraphics[scale=0.3]{qpo_tf.png} 
+             \includegraphics[scale=0.2]{L1_wf_white_inj_tf.png} 
+             \caption{Injected}
         \end{figure}
         \end{center}
 
@@ -216,12 +232,13 @@
         \begin{center}
         \begin{figure}
             \vspace*{-0.5cm}
-    %        \includegraphics[scale=0.3]{qpo_tf.png} 
+             \includegraphics[scale=0.2]{L1_wf_white_rec_tf.png} 
+             \caption{Reconstructed}
         \end{figure}
         \end{center}
     \end{columns}
-    Similar issues to LIB: high-frequency component is not robustly detected /
-    recovered; improvements may be possible with clustering (TBD)
+    {\small Similar issues to LIB: high-frequency component is not robustly detected /
+    recovered; improvements may be possible with clustering (TBD)}
 
 \end{frame}
 
