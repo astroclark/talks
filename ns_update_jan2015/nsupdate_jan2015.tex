@@ -14,7 +14,7 @@
 \begin{document}
 \title{NS Group Update}
 \subtitle{Burst Call Jan 21$^{\text{st}}$ 2015}  
-\author{James A. Clark (for the NS group)}
+\author{James A. Clark for the NS group}
 \institute{Georgia Institute Of Technology}
 \date{} 
 
@@ -73,6 +73,44 @@
 
 \section{Project News}
 
+\subsection{S6 Magnetar Analysis}
+\begin{frame}
+    \frametitle{S6 Magnetar Analysis}
+    R. Quitzow-James: configuring \& tuning STAMP for demonstration magnetar QPO
+    analysis in S6 on 3 SGR bursts.
+    
+    \begin{itemize}
+        \item Background studies: comparing STAMP trigger distributions
+            (following slides) for simulated and S6 data.  Investigating
+            application of vetos to reduce distribution tails.
+        \item Injections (sine-Gaussians, sines, ... ) with
+            $\tau\sim10\mbox{-}100$\,s, frequencies guided by QPO observations
+            to be used to determine energy upper limits.  
+    \end{itemize}
+
+\end{frame}
+
+\begin{frame}
+    \frametitle{STAMP background distribution: Gaussian noise}
+
+    \begin{figure}
+        \centering
+        \scalebox{0.5}{\includegraphics{SNRvsFAPforTriggersRealData.png}}
+    \end{figure}
+
+\end{frame}
+
+\begin{frame}
+    \frametitle{STAMP background distribution: S6 playground}
+
+    \begin{figure}
+        \centering
+        \scalebox{0.5}{\includegraphics{SNRvsFAPforTriggers.png}}
+    \end{figure}
+
+\end{frame}
+
+
 \subsection{BNS Long Bursts}
 \begin{frame}
     \frametitle{BNS Long Burst Study}
@@ -92,18 +130,31 @@
 \end{frame}
 
 \begin{frame}
-    \frametitle{BNS Long Burst Study}
-    As a preliminary MDC study, considering slowly varying ($\dot{f}<0$) signals
-    at 600, 750 \& 900\,Hz with $\tau\sim250$\,s.\\~\\
+    \frametitle{BNS Long Burst Study: Example Waveforms}
+    Example waveform evolution for signal @ 1\,Mpc, typical stellar parameters
+    and initial spin period 1\,ms
 
-    Goals:
+    \begin{figure}
+        \centering
+        \scalebox{0.45}{\includegraphics{longburst_mdc_example.pdf}}
+        \caption{Created from \url{http://arxiv.org/abs/1408.0013}}
+    \end{figure}
+
+
+\end{frame}
+
+\begin{frame}
+    \frametitle{BNS Long Burst Study}
+    Preliminary MDC study: $f=600,~750,~900$\,Hz with $\tau=5,~10,~50,~250$\,s.
+
     \begin{itemize}
         \item Deploy simulation infrastructure appropriate for long signals:
             using swig-wrapped LAL routines in python module
         \item Using a week of S6 data as playground (GPS 946086263--946691063)
-        \item Target common set of MDC frames using X-pipeline \& STAMP
-        \item Will consider more physical (longer duration) signals later once
-            infrastructure and comparisons are in place
+        \item Probe overlapping parameter space for
+            X-pipeline\footnote{Spherical radiometer version} \& STAMP
+        \item Determine the longest duration of this signal we can actually see
+            (i.e., at what point do we cease to accumulate SNR?)
     \end{itemize}
 
 \end{frame}
@@ -122,8 +173,8 @@
         \item Use a background threshold corresponding to $\sim1/10^4$ maps
         \item $50\%$ FAP sensitivity (network) SNRs of
             \begin{itemize}
-                \item $f_0=600$\,Hz: $\rho_{\rm{net}}=40$
-                \item $f_0=900$\,Hz: $\rho_{\rm{net}}=40$
+                \item $f_0=600$\,Hz, $\tau=250$\,s: $\rho_{\rm{net}}=40$
+                \item $f_0=900$\,Hz: $\tau=250$\,s: $\rho_{\rm{net}}=40$
             \end{itemize}
         \item Sensitivities seem reasonable for waveform duration and nature of
             clustering
@@ -132,11 +183,11 @@
     \begin{itemize}
         \item Simulation infrastructure in place to inject \& recover long,
             multi-frame signals in noise, common to multiple
-            analyses\footnote{modulo a potential timing bug which should now be
-            resolved}
+            analyses
         \item Some preliminary sensitivity estimates for toy model
-        \item Next: extent and explore toy models/parameters, investigate longer
-            signals
+        \item Next: extent and explore toy models/parameters
+        \item {\bf Note}: several re-runs, refinements and X-pipeline results
+            recently acquired 
     \end{itemize}
 
 \end{frame}
@@ -148,7 +199,7 @@
 
 \begin{frame}
     \frametitle{Post-BNS Short Bursts}
-    Search plan also calls for BNS follow-ups targeting short, high-freq burst
+    Also developing BNS follow-ups targeting short, high-freq burst
     immediately after merger via (e.g.):
     \begin{itemize}
         \item Coherent WaveBurst: post-merger analysis via reconstructed
@@ -253,10 +304,8 @@
             for common post-BNS long burst STAMP and X-pipeline studies
         \item Preliminary STAMP results for toy model post-BNS long bursts in
             hand and in line with expectation
-        \item Similar simulation infrastructure checking / development for
-            post-BNS short bursts
         \item Prelim. LIB results for on-the-fly NINJA injections of short
-            BNS bursts
+            BNS bursts (infrastructure development)
         \item Prelim. Multi-res CWB 2G results for similar NINJA injections (via
             MDC frames but same functions as LIB)
     \end{itemize}
